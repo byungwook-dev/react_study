@@ -1,12 +1,11 @@
 import "./App.css";
+import Check from "./docs/ref/Check";
 
-import Jsx05 from "./docs/components/Jsx05";
-// import Jsx01, { Jsx02, Jsx03 } from "./docs/components/Jsx01";
 
 function App() {
   return (
     <>
-      <Jsx05 />
+      <Check />
     </>
   );
 }
