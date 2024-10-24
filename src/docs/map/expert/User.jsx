@@ -26,22 +26,42 @@ const User = ({ user }) => {
   //   </li>
   // ) : (<></>);
   // 3) 강남구의 사는 사람의 이름을 태그로 출력
+  // const userTask = address.includes("강남구") ? (
+  //   <li>
+  //     <h2>강남구에 사는 사람</h2>
+  //     <p>이름 : {name}</p>
+  //   </li>
+  // ) : (<></>);
 
   // 4) 모든 핸드폰 번호를 010-1234-5678로 변경해서 태그로 출력
-
-  const [userPhone, setUserPhone] = useState(phone);
-
-  const onclickToPhoneNumber = () => {
-    setUserPhone("010-1234-5678");
-  };
+  
+  // const [userPhone, setUserPhone] = useState(phone);
+  
+  // const onclickToPhoneNumber = () => {
+    //   setUserPhone("010-1234-5678");
+    // };
+  
   // 5) 장보고의 주소를 서울시 중랑구로 변경해서 태그로 출력
+    
+  const [userAddress, setUserAddress] = useState(address);
 
-  return (
-    <ul>
-      {userPhone}
-      <button onClick={onclickToPhoneNumber}>번호 변경</button>
-    </ul>
-  );
-};
-
-export default User;
+  const onclickToAddress = () => {
+    if (name === "장보고") {
+      setUserAddress("서울시 중랑구")
+    }
+  }
+    return (
+      <ul>
+        <li>
+          <p>아이디 : {id}</p>
+          <p>이름 : {name}</p>
+          <p>나이 : {age}</p>
+          <p>전화번호 : {phone}</p>
+          <p>주소 : {userAddress}</p>
+        </li>
+        <button onClick={onclickToAddress}>주소 변경</button>        
+      </ul>
+    );
+  };
+  
+  export default User;
