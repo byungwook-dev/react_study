@@ -6,6 +6,7 @@ const Name = () => {
   // 입력 후 엔터를 누르면 p태그에 반영
   const [result, setResult] = useState("");
   const inputRef = useRef();
+  
   const onChangeToInput = (e) => {
     setResult(e.target.value)
   };
