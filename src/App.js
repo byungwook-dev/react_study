@@ -1,8 +1,10 @@
 import { ThemeProvider } from "styled-components";
 import "./App.css";
 import GlobalStyle from "./global/globalStyle";
-import Styled03 from "./pages/docs/_component/Styled03";
 import theme from "./global/theme";
+
+
+import AnimalsConatiner from "./docs/context/expert/AnimalsConatiner";
 
 
 
@@ -11,7 +13,7 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Styled03 />
+        <AnimalsConatiner/>
       </ThemeProvider>
     </>
   );
