@@ -2,18 +2,15 @@ import { ThemeProvider } from "styled-components";
 import "./App.css";
 import GlobalStyle from "./global/globalStyle";
 import theme from "./global/theme";
-
-
-import AnimalsConatiner from "./docs/context/expert/AnimalsConatiner";
-
-
+import { RouterProvider } from "react-router-dom";
+import router from "./routes/router";
 
 function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <AnimalsConatiner/>
+        <RouterProvider router={router}></RouterProvider>
       </ThemeProvider>
     </>
   );
